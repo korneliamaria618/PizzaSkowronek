@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4C2C2"> <TextView
+    android:id="@+id/rodzaj"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="40dp"
+    android:layout_marginEnd="32dp"
+    android:text="WYBIERZ SWOJĄ PIZZĘ:"
+    android:textAlignment="center"
+    android:textColor="#D11D5D"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hawajska"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#D11D5D"
+        android:onClick="SureHawajska"
+        android:text="PIZZA HAWAJSKA"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rodzaj" />
+
+    <Button
+        android:id="@+id/pepperoni"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#D11D5D"
+        android:onClick="SurePepperoni"
+        android:text="PIZZA PEPPERONI"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hawajska" />
+
+    <Button
+        android:id="@+id/wiejska"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#D11D5D"
+        android:onClick="SureWiejska"
+        android:text="PIZZA WIEJSKA"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pepperoni" />
+
+    <Button
+        android:id="@+id/kebab"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="#D11D5D"
+        android:onClick="SureKebab"
+        android:text="PIZZA KEBAB"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wiejska" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

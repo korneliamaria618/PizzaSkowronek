@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="pudrowy_roz_tlo">#F4C2C2</color>
+    <color name="ciemny_roz_akcent">#D11D5D</color>
+    <color name="jasny_roz_przycisk">#FF69B4</color>
+    <color name="bardzo_ciemny_roz">#880E4F</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="purple_200">#FF69B4</color>
+    <color name="purple_500">#D11D5D</color>
+    <color name="purple_700">#880E4F</color>
+    <color name="teal_200">#F4C2C2</color>
+    <color name="teal_700">#D11D5D</color>
+</resources>

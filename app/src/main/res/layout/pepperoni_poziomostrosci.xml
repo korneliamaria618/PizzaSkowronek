@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4C2C2"> <TextView
+    android:id="@+id/lvl"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="32dp"
+    android:layout_marginTop="60dp"
+    android:layout_marginEnd="32dp"
+    android:text="WYBIERZ POZIOM OSTROŚCI:"
+    android:textAlignment="center"
+    android:textColor="#D11D5D"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/piripiri"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:backgroundTint="#FF69B4"
+        android:onClick="LvlPiripiri"
+        android:text="Piri-Piri (I)"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvl" />
+
+    <Button
+        android:id="@+id/wasabi"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#D11D5D"
+        android:onClick="LvlWasabi"
+        android:text="Wasabi (II)"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/piripiri" />
+
+    <Button
+        android:id="@+id/jalapeno"
+        android:layout_width="220dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#880E4F"
+        android:onClick="LvlJalapeno"
+        android:text="Jalapeño (III)"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/wasabi" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
