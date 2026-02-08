@@ -18,35 +18,56 @@ class Menu : AppCompatActivity() {
 
     fun SureHawajska(view: View) {
         val builder = AlertDialog.Builder(this)
-        builder.setTitle("Wybrano: Pizza Hawajska")
-        builder.setMessage("Składniki: Sos pomidorowy, ser, szynka, ananas.\n\nCzy jesteś Włochem?")
-        builder.setPositiveButton("Nie") { _, _ ->
-            PrzejdzDoRozmiaru("Rodzaj: Pizza Hawajska")
+        builder.setTitle("WYBRANO: PIZZA HAWAJSKA")
+        builder.setMessage("Składniki: Sos, Ser, Szynka, Ananas.\n\nCzy jesteś Włochem?")
+        builder.setPositiveButton("NIE") { _, _ ->
+            PrzejdzDalej("Rodzaj: Pizza Hawajska")
         }
-        builder.setNegativeButton("Tak") { _, _ ->
-            Toast.makeText(this, "Włosi nie jedzą ananasa na pizzy!", Toast.LENGTH_SHORT).show()
+        builder.setNegativeButton("TAK") { _, _ ->
+            Toast.makeText(this, "WŁOSI NIE JEDZĄ ANANASA NA PIZZY!!!", Toast.LENGTH_LONG).show()
         }
         builder.show()
     }
 
     fun SurePepperoni(view: View) {
-        val intent = Intent(this, PoziomOstrosci::class.java).apply {
-            putExtra(EXTRA_MESSAGE, "Rodzaj: Pizza Pepperoni")
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("WYBRANO: PIZZA PEPPERONI")
+        builder.setMessage("Składniki: Sos, Ser, Podwójne Salami Pepperoni.\n\nUwaga: Może być pikantna!!!")
+        builder.setPositiveButton("ZAMAWIAM") { _, _ ->
+            val intent = Intent(this, PoziomOstrosci::class.java).apply {
+                putExtra(EXTRA_MESSAGE, "Rodzaj: Pizza Pepperoni")
+            }
+            startActivity(intent)
         }
-        startActivity(intent)
+        builder.setNegativeButton("POWRÓT", null)
+        builder.show()
     }
 
     fun SureWiejska(view: View) {
-        PrzejdzDoRozmiaru("Rodzaj: Pizza Wiejska")
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("WYBRANO: PIZZA WIEJSKA")
+        builder.setMessage("Składniki: Sos, Ser, Kiełbasa, Boczek, Cebula, Ogórek kiszony.")
+        builder.setPositiveButton("ZAMAWIAM") { _, _ ->
+            PrzejdzDalej("Rodzaj: Pizza Wiejska")
+        }
+        builder.setNegativeButton("POWRÓT", null)
+        builder.show()
     }
 
     fun SureKebab(view: View) {
-        PrzejdzDoRozmiaru("Rodzaj: Pizza Kebab")
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("WYBRANO: PIZZA KEBAB")
+        builder.setMessage("Składniki: Sos, Ser, Mięso Kebab, Cebula czerwona, Sos czosnkowy.")
+        builder.setPositiveButton("ZAMAWIAM") { _, _ ->
+            PrzejdzDalej("Rodzaj: Pizza Kebab")
+        }
+        builder.setNegativeButton("POWRÓT", null)
+        builder.show()
     }
 
-    private fun PrzejdzDoRozmiaru(nazwa: String) {
+    private fun PrzejdzDalej(wiadomosc: String) {
         val intent = Intent(this, Rozmiar::class.java).apply {
-            putExtra(EXTRA_MESSAGE, nazwa)
+            putExtra(EXTRA_MESSAGE, wiadomosc)
         }
         startActivity(intent)
     }

@@ -3,7 +3,9 @@ package com.example.PizzaSkowronek
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SwitchCompat
 
 class WiFi : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,8 +13,14 @@ class WiFi : AppCompatActivity() {
         setContentView(R.layout.pizza_wifi)
     }
 
-    fun przejdzDoMenu(view: View) {
-        val intent = Intent(this, Menu::class.java)
-        startActivity(intent)
+    fun PrzejdzDoMenu(view: View) {
+        val s = findViewById<SwitchCompat>(R.id.wifiSwitch)
+
+        if (s != null && s.isChecked) {
+            val intent = Intent(this, Menu::class.java)
+            startActivity(intent)
+        } else {
+            Toast.makeText(this, "NAJPIERW WŁĄCZ WIFI!", Toast.LENGTH_SHORT).show()
+        }
     }
 }
