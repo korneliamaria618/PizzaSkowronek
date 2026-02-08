@@ -1,1 +1,1 @@
-Proszę sprawdzić plik RAPORT. Tam są wszystkie potrzebne informacje.
+Proszę sprawdzić plik Kornelia Skowronska 96975. Tam są wszystkie potrzebne informacje.
